@@ -18,16 +18,6 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage;
  */
 public class MethodHook implements IXposedHookLoadPackage{
 
-
-
-    /**
-     * This method is called when an app is loaded. It's called very early, even before
-     * {@link Application#onCreate} is called.
-     * Modules can set up their app-specific hooks here.
-     *
-     * @param lpparam Information about the app.
-     * @throws Throwable Everything the callback throws is caught and logged.
-     */
     @Override
     public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpparam) throws Throwable {
         XposedBridge.log(
